@@ -1,0 +1,10 @@
+{
+  "pinned": false,
+  "id": "dec494e2-7ede-4b80-ad6a-df3791a37b4e",
+  "scope": "",
+  "installedInProfiles": [{ "default": {} }],
+  "extensionId": "bedacacpjhfjjffbmlhfnmhimeggfiol",
+  "components": { "contentScript": { "path": "content.js", "enabled": true } },
+  "extensionEnabled": true,
+  "name": "Address Bar"
+}
