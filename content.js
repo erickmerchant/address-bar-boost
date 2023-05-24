@@ -20,7 +20,7 @@ div.shadowRoot.innerHTML = `
 
     div {      
       color: var(--arc-palette-title, hsl(0 0% 100%)); 
-      background: var(--arc-palette-backgroundExtra); 
+      background: var(--arc-palette-backgroundExtra, hsl(0 0% 0% / 0.75)); 
       font-family: system-ui, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
       font-size: 12px; /* sorry! */
       line-height: 1; 
