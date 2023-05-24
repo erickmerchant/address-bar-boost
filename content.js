@@ -19,14 +19,15 @@ div.shadowRoot.innerHTML = `
     }
 
     div {      
-      color: hsl(0 0% 100%); 
-      background: hsl(0 0% 0% / 0.75); 
+      color: var(--arc-palette-title, hsl(0 0% 100%)); 
+      background: var(--arc-palette-backgroundExtra); 
       font-family: system-ui, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
       font-size: 12px; /* sorry! */
       line-height: 1; 
       padding: 0.5em; 
       border-radius: 0.5em 0 0 0;
-      border: 0.25px solid currentColor;
+      border-left: 0.25px solid currentColor;
+      border-top: 0.25px solid currentColor;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
