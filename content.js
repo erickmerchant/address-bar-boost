@@ -1,14 +1,15 @@
-const div = document.createElement("div");
+const addressBar = document.createElement("address-bar");
 
-div.attachShadow({ mode: "open" });
+addressBar.attachShadow({ mode: "open" });
 
-div.shadowRoot.innerHTML = `
+addressBar.shadowRoot.innerHTML = `
   <style>
     * {
       box-sizing: border-box;
     }
 
-    :host { 
+    :host {
+      display: block;
       position: fixed;
       bottom: 0;
       right: 0;
@@ -32,17 +33,18 @@ div.shadowRoot.innerHTML = `
       text-overflow: ellipsis;
       overflow: hidden;
       max-width: 98vw;
+      user-select: none;
     }
   </style>
   <div>${window.location.protocol === "https:" ? "🔒" : "🚧"} ${window.location.href}</div>
 `;
 
-div.addEventListener("mouseover", () => {
-  div.style.setProperty("--bottom", "100%");
+addressBar.addEventListener("mouseover", () => {
+  addressBar.style.setProperty("--bottom", "100%");
 
   setTimeout(() => {
-    div.style.setProperty("--bottom", "0");
+    addressBar.style.setProperty("--bottom", "0");
   }, 15000);
 });
 
-document.body.after(div);
+document.body.after(addressBar);
